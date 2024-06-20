@@ -57,7 +57,7 @@ export class AuthFlow {
       this.client_secret === undefined ||
       this.scope === undefined
     ) {
-      throw new HTTPException(400, {
+      throw new HTTPException(500, {
         message: 'Required parameters were not found. Please provide them to proceed.',
       })
     }

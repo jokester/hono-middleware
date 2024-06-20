@@ -44,7 +44,7 @@ export class AuthFlow {
     code,
   }: XAuthFlow) {
     if (client_id === undefined || client_secret === undefined || scope === undefined) {
-      throw new HTTPException(400, {
+      throw new HTTPException(500, {
         message: 'Required parameters were not found. Please provide them to proceed.',
       })
     }
